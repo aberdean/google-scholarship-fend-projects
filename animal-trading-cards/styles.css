@@ -1,0 +1,36 @@
+h1 {
+	font-size: 2em;
+	margin-left: 0.5em;
+}
+
+img {
+	margin-left: 1em;
+	margin-right: 1em;
+}
+
+span {
+	font-weight: bold;
+}
+
+ul {
+	padding-left: 0;
+	list-style-type: none;
+}
+
+.card {
+	box-shadow: 4px 4px 8px 0 #ccc;
+	width: 330px;
+	border: 1px solid #ccc;
+}
+
+.container {
+	padding-left: 1em;
+	padding-right: 1em;
+	margin: 1em;
+	border: 1px solid #ccc;
+}
+
+.intro {
+	font-style: italic;
+}
+
