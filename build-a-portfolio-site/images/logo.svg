@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: SketchAPI 5.1.250 <https://api.sketch.io/> -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketchjs="https://sketch.io/dtd/" style="" sketchjs:metadata="eyJ0aXRsZSI6IkRyYXdpbmciLCJkZXNjcmlwdGlvbiI6Ik1hZGUgd2l0aCBTa2V0Y2hwYWQgLSBodHRwczovL3NrZXRjaC5pby9za2V0Y2hwYWQiLCJtZXRhZGF0YSI6e30sImNsaXBQYXRoIjp7ImVuYWJsZWQiOnRydWUsInN0eWxlIjp7InN0cm9rZVN0eWxlIjoiYmxhY2siLCJsaW5lV2lkdGgiOjF9fSwiZXhwb3J0RFBJIjo3MiwiZXhwb3J0Rm9ybWF0IjoicG5nIiwiZXhwb3J0UXVhbGl0eSI6MC45NSwidW5pdHMiOiJweCIsIndpZHRoIjoxMjAsImhlaWdodCI6MTIwLCJwYWdlcyI6eyJsZW5ndGgiOjEsImRhdGEiOlt7IndpZHRoIjoxMjAsImhlaWdodCI6MTIwfV19fQ==" width="120" height="120" viewBox="0 0 120 120" sketchjs:version="5.1.250">
+<defs>
+	<linearGradient id="dna_3794821954" gradientUnits="userSpaceOnUse" x1="233.10820056702897" x2="233.10820056702897" y1="0" y2="258.70493185746653">
+		<stop offset="0" style="stop-color:#b5bdc8;"/>
+		<stop offset="0.5" style="stop-color:#6e7881;"/>
+		<stop offset="1" style="stop-color:#28343b;"/>
+	</linearGradient>
+	<linearGradient id="dna_4168998184" gradientUnits="userSpaceOnUse" x1="258.26932287615006" x2="258.26932287615006" y1="0" y2="381.09413116770116">
+		<stop offset="0" style="stop-color:#b5bdc8;"/>
+		<stop offset="0.5" style="stop-color:#6e7881;"/>
+		<stop offset="1" style="stop-color:#28343b;"/>
+	</linearGradient>
+</defs>
+
+<g sketchjs:tool="fancyText" style="mix-blend-mode: source-over;" transform="matrix(1,0,0,1,4,25)">
+	<g sketchjs:uid="1" style="">
+		<g sketchjs:uid="2" style="">
+			<path d=" M 25.658 65 L 25.658 62.78 L 52.89 62.78 L 37.202 19.638000000000005 L 20.7 65 L 18.332 65 L 37.202 13.126000000000005 L 56.071999999999996 65 L 25.658 65 Z" sketchjs:uid="3" style="fill: #d00b6d; paint-order: stroke fill markers;"/>
+		</g>
+	</g>
+</g>
+<g sketchjs:tool="fancyText" style="mix-blend-mode: source-over;" transform="matrix(1,0,0,1,27,5)">
+	<g sketchjs:uid="1" style="">
+		<g sketchjs:uid="2" style="">
+			<path d=" M 48.090625 85 L 48.090625 85 L 32.590625 85 L 32.590625 17.1875 L 44.409375 17.1875 L 44.409375 17.1875 Q 57.196875 17.1875 63.6875 21.885937499999997 L 63.6875 21.885937499999997 L 63.6875 21.885937499999997 Q 70.178125 26.584375 70.178125 35.109375 L 70.178125 35.109375 L 70.178125 35.109375 Q 70.178125 44.796875 62.040625 49.35 L 62.040625 49.35 L 62.040625 49.35 Q 73.859375 53.80625 73.859375 66.109375 L 73.859375 66.109375 L 73.859375 66.109375 Q 73.859375 74.828125 67.465625 79.9140625 L 67.465625 79.9140625 L 67.465625 79.9140625 Q 61.071875 85 48.090625 85 Z Z M 35.496875 82.09375 L 48.090625 82.09375 L 48.090625 82.09375 Q 52.64375 82.09375 56.421875 81.3671875 L 56.421875 81.3671875 L 56.421875 81.3671875 Q 60.2 80.640625 63.6390625 78.9453125 L 63.6390625 78.9453125 L 63.6390625 78.9453125 Q 67.078125 77.25 69.015625 73.95625 L 69.015625 73.95625 L 69.015625 73.95625 Q 70.953125 70.6625 70.953125 66.109375 L 70.953125 66.109375 L 70.953125 66.109375 Q 70.953125 55.74375 60.975 52.0625 L 60.975 52.0625 L 55.1625 49.93125 L 60.5875 46.83125 L 60.5875 46.83125 Q 67.271875 43.15 67.271875 35.109375 L 67.271875 35.109375 L 67.271875 35.109375 Q 67.271875 20.09375 44.409375 20.09375 L 44.409375 20.09375 L 35.496875 20.09375 L 35.496875 82.09375 Z" sketchjs:uid="3" style="fill: #11066b; paint-order: stroke fill markers;"/>
+		</g>
+	</g>
+</g>
+</svg>

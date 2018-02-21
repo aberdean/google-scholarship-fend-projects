@@ -1,0 +1,164 @@
+/*========================*/
+/*==== GENERIC STYLES ====*/
+/*========================*/
+
+h1,
+h2,
+h3,
+a {
+	font-family: 'Comfortaa', cursive;
+}
+
+p {
+	font-family: 'Roboto', sans-serif;
+}
+
+h1,
+h2 {
+	text-transform: uppercase;
+	color: #555;
+}
+
+h3 {
+	font-size: 1.4em;
+	color: #343434;
+}
+
+
+a {
+	text-decoration: none;
+	color: #555;
+}
+
+hr {
+	height: 4px;
+	background-color: #dcdcdc;
+	border: none;
+}
+
+footer {
+	text-align: center;
+}
+
+/*======================*/
+/*==== MOBILE FIRST ====*/
+/*======================*/
+header {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+}
+
+.logo {
+	height: 20%;
+	width: 20%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.title-subtitle {
+	display: block;
+}
+
+.title {
+	margin-top: auto;
+	margin-bottom: 0;
+	font-size: 180%;
+	text-align: center;
+}
+
+.subtitle {
+	margin-top: auto;
+	font-size: 120%;
+	text-align: center;
+}
+
+.title-subtitle {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+main {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+}
+
+.banner {
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	max-height: 500px;
+}
+
+.featured {
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 20px;
+}
+
+.featured img {
+	width: 100%;
+	height: 100%;
+	margin-top: auto;
+}
+
+/*============================*/
+/*==== TABLET AND DESKTOP ====*/
+/*============================*/
+@media screen and (min-width: 650px) {
+	
+	header {
+		flex-direction: row;
+	}
+
+	.logo {
+		justify-content: left;
+		text-align: left;
+		max-height: 120px;
+		max-width: 120px;
+		margin-left: 0;
+	}
+
+	.title-subtitle {
+		justify-content: right;
+		margin-top: auto;
+		margin-bottom: 1%;
+		margin-right: 10px;
+	}
+
+	.subtitle {
+		text-align: right;
+	}
+	
+	/*======================*/
+	/*==== MAIN CONTENT ====*/
+	/*======================*/
+	.container {
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.featured {
+		max-width: 32.5%;
+		height: 32.5%;
+		margin-left: auto;
+		margin-right: auto;
+		/* Keep links within container */
+		word-wrap: break-word; 
+	}
+ 
+	.featured:first-child {
+		margin-left: 0;
+	}
+
+	.featured:last-child {
+		margin-right: 0;
+	}
+
+}
+
+
