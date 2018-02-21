@@ -5,16 +5,18 @@
 h1,
 h2,
 h3,
+h4,
 a {
-	font-family: 'Comfortaa', cursive;
+	font-family: "Comfortaa", cursive;
 }
 
 p {
-	font-family: 'Roboto', sans-serif;
+	font-family: "Roboto", sans-serif;
 }
 
 h1,
-h2 {
+h2,
+h4 {
 	text-transform: uppercase;
 	color: #555;
 }
@@ -22,6 +24,10 @@ h2 {
 h3 {
 	font-size: 1.4em;
 	color: #343434;
+}
+
+h4 {
+
 }
 
 
@@ -32,7 +38,7 @@ a {
 
 hr {
 	height: 4px;
-	background-color: #dcdcdc;
+	background: #dcdcdc;
 	border: none;
 }
 
@@ -115,7 +121,6 @@ main {
 	}
 
 	.logo {
-		justify-content: left;
 		text-align: left;
 		max-height: 120px;
 		max-width: 120px;
@@ -123,7 +128,6 @@ main {
 	}
 
 	.title-subtitle {
-		justify-content: right;
 		margin-top: auto;
 		margin-bottom: 1%;
 		margin-right: 10px;
@@ -148,7 +152,7 @@ main {
 		margin-left: auto;
 		margin-right: auto;
 		/* Keep links within container */
-		word-wrap: break-word; 
+		word-wrap: break-word;
 	}
  
 	.featured:first-child {
