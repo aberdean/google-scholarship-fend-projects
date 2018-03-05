@@ -80,6 +80,7 @@ h1 {
     background: #02ccba;
     cursor: default;
     font-size: 33px;
+    pointer-events: none;
 }
 
 /*
