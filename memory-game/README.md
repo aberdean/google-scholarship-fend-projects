@@ -20,7 +20,7 @@ symbols.
   * If the symbols match, the cards will be locked and you will be able to
 go ahead and select two more cards.
 
-  * If the symbols don't match, the cards will be covered again and you will 
+  * If the symbols don't match, the cards will be covered again and you will
 have to continue flipping two cards at a time, trying to find matches.
 
 * You win when you are able to match all the cards.

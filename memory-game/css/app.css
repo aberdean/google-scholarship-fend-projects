@@ -165,18 +165,18 @@ h2 {
 .close:hover,
 .close:focus {
     color: #000;
-    text-decoration: none;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .play-again {
     background: #aa7ecd;
     border: none;
     border-radius: 5px;
-    box-shadow: 3px 3px 11px 0px rgba(50, 50, 50, 0.55);
+    box-shadow: 3px 3px 11px 0 rgba(50, 50, 50, 0.55);
     color: #fff;
-    font-variant: small-caps;
     font-size: 20px;
+    font-variant: small-caps;
     height: 60px;
     width: 150px;
 }
@@ -222,12 +222,12 @@ h2 {
 
 @media screen and (min-height: 330px) and (max-height: 530px) {
     h1 {
-        text-align: center;
         margin-bottom: 10px;
+        text-align: center;
     }
     .score-panel {
-        text-align: center;
         margin-bottom: 150px;
+        text-align: center;
     }
 
     .deck {
