@@ -5,6 +5,7 @@
     <title>Matching Game</title>
     <meta name="description" content="A version of the classic Concentration
     game.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
     <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Coda">
     <link rel="stylesheet" href="css/app.css">
@@ -16,6 +17,22 @@
             <h1>Matching Game</h1>
         </header>
 
+        <section class="modal">
+            <div class="modal-content">
+                <span class="close">x</span>
+                <h2>Congratulations! You Won!</h2>
+                <ul class = "final-stars">
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                </ul>
+                <p>You made <span class="final-moves">0</span> moves in <span
+                    class="final-minutes">0</span> minutes and <span
+                    class="final-seconds">0</span> seconds.</p>
+                <button class="play-again">Play again!</button>
+            </div>
+        </section>
+
         <section class="score-panel">
         	<ul class="stars">
         		<li><i class="fa fa-star"></i></li>
@@ -23,7 +40,10 @@
         		<li><i class="fa fa-star"></i></li>
         	</ul>
 
-            <span class="moves">0</span> Moves
+            Moves: <span class="moves">0</span>
+
+            Elapsed Time: <span class="minutes">0</span>m
+            <span class="seconds">0</span>s
 
             <div class="restart">
         		<i class="fa fa-repeat"></i>
@@ -32,7 +52,7 @@
 
         <ul class="deck">
             <li class="card">
-                <i class="fa fa-diamond"></i>
+                <i class="fa fa-gem"></i>
             </li>
             <li class="card">
                 <i class="fa fa-paper-plane-o"></i>
@@ -56,7 +76,7 @@
                 <i class="fa fa-bicycle"></i>
             </li>
             <li class="card">
-                <i class="fa fa-diamond"></i>
+                <i class="fa fa-gem"></i>
             </li>
             <li class="card">
                 <i class="fa fa-bomb"></i>
