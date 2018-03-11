@@ -22,6 +22,7 @@ body {
     font-family: 'Coda', cursive;
 }
 
+/* Mobile First */
 .container {
     align-items: center;
     display: flex;
@@ -29,9 +30,14 @@ body {
     justify-content: center;
 }
 
-h1 {
+h1,
+h2 {
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
+}
+
+h2 {
+    padding-top: 20px;
 }
 
 /*
@@ -47,9 +53,9 @@ h1 {
     flex-wrap: wrap;
     justify-content: space-between;
     margin: 0 0 3em;
-    min-height: 680px;
-    padding: 32px;
-    width: 660px;
+    min-height: 300px;
+    padding: 16px;
+    width: 300px;
 }
 
 .card {
@@ -61,9 +67,9 @@ h1 {
     cursor: pointer;
     display: flex;
     font-size: 0;
-    height: 125px;
+    height: 55px;
     justify-content: center;
-    width: 125px;
+    width: 55px;
 }
 
 .open {
@@ -73,13 +79,13 @@ h1 {
 }
 
 .show {
-    font-size: 33px;
+    font-size: 28px;
 }
 
 .match {
     background: #02ccba;
     cursor: default;
-    font-size: 33px;
+    font-size: 28px;
     pointer-events: none;
 }
 
@@ -89,23 +95,215 @@ h1 {
 
 .score-panel {
     margin-bottom: 10px;
-    text-align: left;
+    text-align: center;
     width: 345px;
 }
 
-.stars {
+.stars,
+.final-stars {
     color: #aa7ecd;
-    display: inline-block;
-    margin: 0 5px 0 0;
+    display: block;
+    margin: 0 10px 0 0;
     padding: 0;
 }
 
-.stars li {
+.stars {
+    font-size: 2em;
+}
+
+.final-stars {
+    font-size: 1em;
+}
+
+.stars li,
+.final-stars li {
     display: inline-block;
     list-style: none;
 }
 
 .restart {
     cursor: pointer;
+}
+
+.moves {
+    margin-right: 10px;
+}
+
+/*
+ * Styles for the Modal
+ */
+
+.modal {
+    background: rgba(0,0,0,0.4);
+    display: none;
+    height: 100%;
+    left: 0;
+    padding-top: 100px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.modal-content {
+    background: #f7f3fa;
+    border: 1px solid #aa7ecd;
+    height: 80%;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+    width: 80%;
+}
+
+.close {
+    color: #aaa;
     float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.play-again {
+    background: #aa7ecd;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 3px 3px 11px 0px rgba(50, 50, 50, 0.55);
+    color: #fff;
+    font-variant: small-caps;
+    font-size: 20px;
+    height: 60px;
+    width: 150px;
+}
+
+/* Begin Landscape Views */
+@media screen and (max-height: 530px) {
+    .container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    header {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 1.6em;
+        margin-top: 20px;
+        padding-left: 5%;
+        text-align: left;
+    }
+
+    .modal {
+        padding-top: 0;
+    }
+
+    .modal-content {
+        height: 90%;
+    }
+
+    .score-panel {
+        width: 40%;
+    }
+
+    .deck {
+        margin: -60px 20px 0 0;
+        max-width: 300px;
+        padding: 16px;
+        width: 50%;
+    }
+}
+
+@media screen and (min-height: 330px) and (max-height: 530px) {
+    h1 {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .score-panel {
+        text-align: center;
+        margin-bottom: 150px;
+    }
+
+    .deck {
+        margin: 0;
+    }
+}
+/* End Landscape Views */
+
+/* Tablets & Medium screens */
+@media screen and (min-width: 500px) and (min-height: 620px) {
+    h1 {
+        font-size: 3em;
+    }
+
+    h2 {
+        padding-top: 40px;
+    }
+
+    p {
+        padding-bottom: 20px;
+    }
+
+    .score-panel {
+        font-size: 1.3em;
+    }
+
+    .show,
+    .match {
+        font-size: 2em;
+    }
+
+    .stars,
+    .final-stars {
+        display: block;
+        font-size: 2em;
+    }
+
+    .restart {
+        float: right;
+    }
+
+    .deck {
+        min-height: 400px;
+        padding: 32px;
+        width: 400px;
+    }
+
+    .card {
+        height: 75px;
+        width: 75px;
+    }
+}
+
+/* Desktop & Large Screens */
+@media screen and (min-width: 760px) and (min-height: 770px) {
+    h2 {
+        font-size: 2em;
+    }
+
+    p {
+        font-size: 1.3em;
+        padding-bottom: 100px;
+    }
+
+    .final-stars {
+        padding-bottom: 40px;
+        padding-top: 40px;
+    }
+
+    .deck {
+        min-height: 660px;
+        width: 660px;
+    }
+
+    .card {
+        height: 125px;
+        width: 125px;
+    }
 }
