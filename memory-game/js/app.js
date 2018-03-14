@@ -372,6 +372,7 @@ function calculateScore() {
     if (counter > 22) {
         secondStar.className = "fa fa-star-o";
     }
+}
 
 // NOTE FOR REVIEWER: I needed to change this to pass the project
 // specs, but I intend to restore my game to my original scoring
