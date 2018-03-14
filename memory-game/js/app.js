@@ -360,32 +360,10 @@ function gameWon() {
 /**
  * @description Calculate the score in stars. If the player solves the game
  * in a maximum of 14 moves, then the player receives a full score, 3 stars.
- * If it takes the player 15 to 22 moves, the player earns 2 stars and finally,
- * if the total number of moves are 23 or above, the player gets 1 star.
- */
-function calculateScore() {
-    // the counter represents the amount of moves.
-    if (counter > 14 && counter <= 22) {
-        thirdStar.className = "fa fa-star-o";
-    }
-
-    if (counter > 22) {
-        secondStar.className = "fa fa-star-o";
-    }
-}
-
-// NOTE FOR REVIEWER: I needed to change this to pass the project
-// specs, but I intend to restore my game to my original scoring
-// system after the project is reviewed. That's why I left this
-// code commented out! Else, I wouldn't leave commented out chunks
-// of code. Thanks for understanding!
-/**
- * @description Calculate the score in stars. If the player solves the game
- * in a maximum of 14 moves, then the player receives a full score, 3 stars.
  * If the player needs more than 14 moves to solve the game, the player loses
  * half a star for every 2 additional moves.
  */
-/*function calculateScore() {
+function calculateScore() {
     // the counter represents the amount of moves.
     if (counter > 14 && counter <= 16) {
         thirdStar.className = "fa fa-star-half-o";
@@ -410,4 +388,4 @@ function calculateScore() {
     if (counter > 24) {
         firstStar.className = "fa fa-star-o";
     }
-}*/
+}
