@@ -1,10 +1,4 @@
 /**
- * @description Indicate if the player won the game.
- * @type {boolean}
- */
-let victory = false;
-
-/**
  * @description Represent the enemies the player needs to avoid to win the game.
  * Enemies have a default image, a random speed, and an initial position on the
  * screen. They move continuously and stop only when the player wins the game.
@@ -23,6 +17,7 @@ class Enemy {
         this.speed = speed;
         this.x = x;
         this.y = y;
+        this.victory = false;
     }
 
     /**
@@ -118,7 +113,7 @@ class Player {
                     enemy.speed = 0;
                 }
                 // print the victory message on the screen
-                victory = true;
+                this.victory = true;
                 this.render();
             }, 100);
         }
@@ -130,7 +125,7 @@ class Player {
      */
     render() {
         ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
-        if (victory === true) {
+        if (this.victory === true) {
             ctx.font = '72px Georgia';
             ctx.fillText('You won!', 100, 280);
             ctx.font = '24px Georgia';
