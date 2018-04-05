@@ -17,7 +17,6 @@ class Enemy {
         this.speed = speed;
         this.x = x;
         this.y = y;
-        this.victory = false;
     }
 
     /**
@@ -73,6 +72,7 @@ class Player {
         this.sprite = 'images/char-pink-girl.png';
         this.x = x;
         this.y = y;
+        this.victory = false;
     }
 
     /**
