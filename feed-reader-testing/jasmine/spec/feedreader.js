@@ -83,7 +83,7 @@ $(function() {
             $('.feed').empty();
             /* ensure loadFeed completes before running the test */
             loadFeed(0, done);
-        })
+        });
         /* Ensure there is at least one .entry element within the 
          * .feed container.
          */
