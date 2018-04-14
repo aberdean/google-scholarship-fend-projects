@@ -64,11 +64,11 @@ $(function() {
             /* Since we made sure that the menu is hidden by default,
              * after clicking on the menu icon, it should not be hidden anymore.
              */
-            $('.menu-icon-link').trigger("click");
+            $('.menu-icon-link').click();
             expect($('body').hasClass('menu-hidden')).toBe(false);
             
             /* Clicking again on the menu icon should hide the menu again */
-            $('.menu-icon-link').trigger("click");
+            $('.menu-icon-link').click();
             expect($('body').hasClass('menu-hidden')).toBe(true);
         });
     });
@@ -88,7 +88,7 @@ $(function() {
          * .feed container.
          */
         it('contain at least one entry', function() {
-            expect($('.feed').children().length).toBeGreaterThan(0);
+            expect($('.entry').length).toBeGreaterThan(0);
         });
     });
 
@@ -103,39 +103,23 @@ $(function() {
          */
         beforeEach(function(done) {
             /* load the first feed */
-            loadFeed(0);
-            /* store the feed entries */
-            oldEntries = $('.feed').children();
+            loadFeed(0, function() {
+                oldEntries = $('.feed').contents();
+                done();
+            });
+
             /* switch to the next feed */  
-            loadFeed(1, done);
+            loadFeed(1, function() {
+                newEntries = $('.feed').contents();
+                done();
+            });
         });
 
         /* Ensure that when a new feed is loaded by the loadFeed function 
          * the content actually changes.
          */
-        it('changes the content', function(done) {
-            
-            /* Store the new feed entries */
-            newEntries = $('.feed').children();
-
-            for (let index in oldEntries) {
-
-                /* Only compare feed entries when both the old entry and the
-                 * new entry are defined.
-                 */
-                if (typeof oldEntries[index].href !== 'undefined' &&
-                    typeof newEntries[index].href !== 'undefined') {
-
-                    /* The old URL should be different from the new URL */
-                    expect(oldEntries[index].href)
-                            .not.toEqual(newEntries[index].href);
-
-                    /* The old title should be different from the new title */
-                    expect(oldEntries[index].innerText)
-                            .not.toEqual(newEntries[index].innerText);
-                }
-            }
-            done();
+        it('changes the content', function() {
+            expect(oldEntries).not.toBe(newEntries);
         });
     });
 }());
