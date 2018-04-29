@@ -104,14 +104,13 @@ $(function() {
         beforeEach(function(done) {
             /* load the first feed */
             loadFeed(0, function() {
-                oldEntries = $('.feed').contents();
-                done();
-            });
-
-            /* switch to the next feed */  
-            loadFeed(1, function() {
-                newEntries = $('.feed').contents();
-                done();
+                oldEntries = $('.feed').html();
+            
+                /* switch to the next feed */  
+                loadFeed(1, function() {
+                    newEntries = $('.feed').html();
+                    done();
+                });
             });
         });
 
