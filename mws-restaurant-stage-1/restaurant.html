@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Normalize.css for better cross-browser consistency -->
     <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
     <!-- Main CSS file -->
@@ -15,7 +16,7 @@
     <header>
     <!-- Beginning nav -->
         <nav>
-          <h1><a href="/">Restaurant Reviews</a></h1>
+          <h1 class="title"><a href="/">Restaurant Reviews</a></h1>
         </nav>
         <!-- Beginning breadcrumb -->
         <ul id="breadcrumb" >
@@ -47,6 +48,7 @@
             <ul id="reviews-list"></ul>
         </section>
         <!-- End reviews -->
+
     </main>
     <!-- End main -->
 
@@ -63,7 +65,7 @@
     <!-- Main javascript file -->
     <script type="text/javascript" src="js/restaurant_info.js"></script>
     <!-- Google Maps -->
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAP_API_KEY&libraries=places&callback=initMap"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&libraries=places&callback=initMap"></script>
     <!-- End scripts -->
 
 </body>
