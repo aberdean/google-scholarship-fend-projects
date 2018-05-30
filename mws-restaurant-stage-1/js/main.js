@@ -5,9 +5,17 @@ var map;
 var markers = [];
 
 /**
- * Fetch neighborhoods and cuisines as soon as the page is loaded.
+ * As soon as the page is loaded, register a service worker for offline website
+ * rendering. Then, fetch neighborhoods and cuisines.
  */
 document.addEventListener('DOMContentLoaded', (event) => {
+  if (!navigator.serviceWorker) return;
+
+  navigator.serviceWorker.register('sw.js').then(() => {
+    console.log('Registration worked!');
+  }).catch(() => {
+    console.log('Registration failed!');
+  });
   fetchNeighborhoods();
   fetchCuisines();
 });
