@@ -12,7 +12,7 @@
 
 ## Background
 
-In **Stage 1** of this project, a static restaurant reviews website is converted into one that is responsive on different sized displays. In addition, accessibility is implemented, so the site is ready for screen reader use.
+In **Stage 1** of this project, a static restaurant reviews website is converted into one that is responsive on different sized displays. In addition, accessibility is implemented, so the site is ready for screen reader and/or keyboard use.
 Finally, a service worker is implemented, to allow for a seamless offline experience.
 
 ### Installation
@@ -41,8 +41,8 @@ and substitute the `YOUR_GOOGLE_MAP_API_KEY` text with your own API key in both 
 Then, with your server running, point your browser to `http://localhost:3000`
 and enjoy!
 
-You can search restaurants by neighborhood or by cuisine. You can learn each restaurant's address and opening hours, find the restaurant on the map, and
-read the reviews other customers wrote.
+You can search restaurants in New York by neighborhood or by cuisine. You can learn each restaurant's address and opening hours, find the restaurant on the
+map, and read the reviews other customers wrote.
 
 ### Credits
 The starter code for the static restaurant reviews website is from [Udacity](https://github.com/udacity/mws-restaurant-stage-1)
