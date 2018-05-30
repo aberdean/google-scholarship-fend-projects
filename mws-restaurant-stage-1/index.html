@@ -14,23 +14,31 @@
         <nav>
             <h1 class="title"><a href="/">Restaurant Reviews</a></h1>
         </nav>
+        <a href="#main-section" class="skip-link">Skip to main content</a>
     </header>
 
     <main id="maincontent">
-        <section id="map-container">
+           
+        <section id="map-container" role="application" 
+                 title="Map of New York restaurants"
+                 aria-label="Map of New York restaurants">  
             <div id="map"></div>
         </section>
         
-        <section>
-            <div class="filter-options">
+        <section id="main-section">
+            <div class="filter-options"
+                 aria-label="Filter results by neighborhoods and cuisines"
+                 tabindex="0">
                 <h2>Filter Results</h2>
-
-                <select id="neighborhoods-select" name="neighborhoods"
+                
+                <select id="neighborhoods-select" name="neighborhoods" 
+                        aria-label="Select your desired neighborhood"
                         onchange="updateRestaurants()">
                     <option value="all">All Neighborhoods</option>
                 </select>
 
                 <select id="cuisines-select" name="cuisines"
+                        aria-label="Select your preferred cuisine type"
                         onchange="updateRestaurants()">
                     <option value="all">All Cuisines</option>
                 </select>
