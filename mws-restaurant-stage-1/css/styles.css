@@ -74,10 +74,6 @@ section {
     position: relative;
 }
 
-.title {
-    padding-top: 10px;
-}
-
 #footer {
     background-color: #444;
     color: #b3b3b3;
@@ -102,18 +98,20 @@ section {
 }
 
 /* ====================== Navigation ====================== */
-nav {
+.title {
     background-color: #252831;
-    height: 80px;
+    height: 70px;
+    margin: 0;
+    padding-top: 10px;
     text-align:center;
     width: 100%;
 }
 
-nav h1 {
+.title h1 {
     margin: auto;
 }
 
-nav h1 a {
+.title a {
     color: #fff;
     font-size: 14pt;
     font-weight: 200;
@@ -394,7 +392,7 @@ nav h1 a {
         height: 87%;
         position: fixed;
         right: 0;
-        top: 90px;
+        top: 100px;
         width: 50%;
     }
 
