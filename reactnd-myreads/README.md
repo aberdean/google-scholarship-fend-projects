@@ -17,15 +17,15 @@ On the main page, you'll find three bookshelves, one for the books you're
 currently reading, one for the books you're planning to read, and one for the
 books you've already read.
 
-There is a search function that allows you to search for new books to add to
-your shelves and, of course, you can move your books from one shelve to another
-whenever you need.
+There is also a search function that allows you to search for new books to add
+to your shelves and, of course, you can move your books from one shelf to
+another whenever you need.
 
 ## Installation
 
 To run the project:
 
-* Clone pr download this repository
+* Clone or download this repository
 * On the terminal or command line, type `npm install` to install all dependencies
 * Type `npm start` to launch the app on your browser
 
@@ -35,8 +35,9 @@ To run the project:
 ├── SEARCH_TERMS.md # The whitelisted short collection of available search terms that can be used with the app.
 ├── package.json # npm package manager file.
 ├── public
+│   ├── cover-not-available.png
 │   ├── favicon.ico
-│   └── index.html
+│   └── index.html
 └── src
     ├── App.css
     ├── App.js
@@ -47,7 +48,10 @@ To run the project:
     │   ├── arrow-back.svg
     │   └── arrow-drop-down.svg
     ├── index.css
-    └── index.js
+    ├── index.js
+    ├── ListBooks.js
+    ├── SearchBooks.js
+    └── SingleBook.js
 ```
 
 ## Backend Server
