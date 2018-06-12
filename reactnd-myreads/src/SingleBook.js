@@ -1,29 +1,36 @@
 import React, { Component } from 'react'
 
 class SingleBook extends Component {
+
 	render() {
-    const book = this.props.book;
+    const { book, onChangeShelf } = this.props
+    let backgroundImg = book.imageLinks ? `url(${book.imageLinks.thumbnail})`
+                                          : 'url("/cover-not-available.png")'
+
 		return (
-      <li key={book.id}>
-        <div className="book">
-          <div className="book-top">
-            <div className="book-cover" style={{ 
-              backgroundImage: `url(${book.backgroundImage})`
-            }}></div>
-            <div className="book-shelf-changer">
-              <select>
-                <option value="none" disabled>Move to...</option>
-                <option value="currentlyReading">Currently Reading</option>
-                <option value="wantToRead">Want to Read</option>
-                <option value="read">Read</option>
-                <option value="none">None</option>
-              </select>
-            </div>
+      <div key={book.id} className="book">
+        <div className="book-top">
+          <div className="book-cover"
+            style={{backgroundImage: `${backgroundImg}` }} />
+          <div className="book-shelf-changer">
+            <select value={book.shelf ? book.shelf : "none"}
+                    onChange={(event) =>
+                                      onChangeShelf(book, event.target.value)}>
+              <option value="none" disabled>Move to...</option>
+              <option value="currentlyReading">Currently Reading</option>
+              <option value="wantToRead">Want to Read</option>
+              <option value="read">Read</option>
+              <option value="none">None</option>
+            </select>
           </div>
-          <div className="book-title">{book.title}</div>
-          <div className="book-authors">{book.author}</div>
         </div>
-      </li>
+        <div className="book-title">
+          {book.title ? book.title : 'Title not Available'}
+        </div>
+        <div className="book-authors">
+          {book.authors ? book.authors.join(', ') : 'Author not available'}
+        </div>
+      </div>
 		)
 	}
 }
