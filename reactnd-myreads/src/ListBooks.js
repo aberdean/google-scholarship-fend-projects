@@ -15,9 +15,9 @@ class ListBooks extends Component {
   }
 
   render() {
-    {/** The names of the shelves in the book object */}
+    /** The names of the shelves in the book object */
     const shelves = ['currentlyReading', 'wantToRead', 'read']
-    {/** The names of the shelves to be displayed on the home page */}
+    /** The names of the shelves to be displayed on the home page */
     const shelfTitles = ['Currently Reading', 'Want to Read', 'Read']
 
     const { books, onChangeShelf } = this.props

@@ -15,9 +15,9 @@ class SingleBook extends Component {
 
 	render() {
     const { book, onChangeShelf } = this.props
-    {/** Set the book cover image, or the default image if a cover image is
-      * not available.
-      */}
+    /** Set the book cover image, or the default image if a cover image is
+     * not available.
+     */
     let backgroundImg = book.imageLinks ? `url(${book.imageLinks.thumbnail})`
                                           : 'url("/cover-not-available.png")'
 
@@ -29,11 +29,10 @@ class SingleBook extends Component {
           <div className="book-shelf-changer">
             {/** Highlight the current book's shelf if one is selected,
                * otherwise don't highlight any.
+               * When the user selects a new shelf for a book,
+               * signal the event to the main app component.
                */}
             <select value={book.shelf ? book.shelf : "none"}
-                    {/** When the user selects a new shelf for a book,
-                       * signal the event to the main app component.
-                       */}
                     onChange={(event) =>
                                       onChangeShelf(book, event.target.value)}>
               <option value="none" disabled>Move to...</option>
