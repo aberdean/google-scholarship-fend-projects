@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import SingleBook from './SingleBook'
 import * as BooksAPI from './BooksAPI'
 import PropTypes from 'prop-types'
@@ -6,7 +7,6 @@ import PropTypes from 'prop-types'
 class SearchBooks extends Component {
   static propTypes = {
     onChangeShelf: PropTypes.func.isRequired,
-    onUpdateSearchPage: PropTypes.func.isRequired
   }
 
   state = {
@@ -30,16 +30,14 @@ class SearchBooks extends Component {
   }
 
 	render() {
-    const { onChangeShelf, onUpdateSearchPage } = this.props
+    const { onChangeShelf } = this.props
     const { query, books } = this.state
 
 		return(
       <div className="search-books">
         <div className="search-books-bar">
-          <a className="close-search"
-                  onClick={() => ({ onUpdateSearchPage })}>
-             Close
-          </a>
+          <Link className="close-search" to="/">Close</Link>
+          
           <div className="search-books-input-wrapper">
             
             <input type="text" 
