@@ -4,6 +4,11 @@ import * as BooksAPI from './BooksAPI'
 import PropTypes from 'prop-types'
 
 class SearchBooks extends Component {
+  static propTypes = {
+    onChangeShelf: PropTypes.func.isRequired,
+    onUpdateSearchPage: PropTypes.func.isRequired
+  }
+
   state = {
     query: '',
     books: []

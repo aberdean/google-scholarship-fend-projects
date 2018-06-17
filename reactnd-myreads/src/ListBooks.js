@@ -1,7 +1,13 @@
 import React, { Component } from 'react'
 import SingleBook from './SingleBook'
+import PropTypes from 'prop-types'
 
 class ListBooks extends Component {
+  static propTypes = {
+    books: PropTypes.array.isRequired,
+    onChangeShelf: PropTypes.func.isRequired
+  }
+
   render() {
     const shelves = ['currentlyReading', 'wantToRead', 'read']
     const shelfTitles = ['Currently Reading', 'Want to Read', 'Read']
