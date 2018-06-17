@@ -28,14 +28,14 @@ class SingleBook extends Component {
             style={{backgroundImage: `${backgroundImg}` }} />
           <div className="book-shelf-changer">
             {/** Highlight the current book's shelf if one is selected,
-               * otherwise don't highlight any.
+               * otherwise highlight None.
                * When the user selects a new shelf for a book,
                * signal the event to the main app component.
                */}
             <select value={book.shelf ? book.shelf : "none"}
                     onChange={(event) =>
                                       onChangeShelf(book, event.target.value)}>
-              <option value="none" disabled>Move to...</option>
+              <option value="moveTo" disabled>Move to...</option>
               <option value="currentlyReading">Currently Reading</option>
               <option value="wantToRead">Want to Read</option>
               <option value="read">Read</option>
