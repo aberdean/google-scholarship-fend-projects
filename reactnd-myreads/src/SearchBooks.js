@@ -10,7 +10,7 @@ import PropTypes from 'prop-types'
  */
 class SearchBooks extends Component {
   static propTypes = {
-    /** 
+    /**
      * Keep track of when a user changes the self for a book.
      */
     onChangeShelf: PropTypes.func.isRequired,
@@ -40,7 +40,7 @@ class SearchBooks extends Component {
         }
       })
     } else {
-      this.setState({ books: [] })
+      this.setState({ query: '', books: [] })
     }
   }
 
@@ -54,7 +54,7 @@ class SearchBooks extends Component {
           {/** Return to the home page */}
           <Link className="close-search" to="/">Close</Link>
           {/** Render the search bar */}
-          <div className="search-books-input-wrapper"> 
+          <div className="search-books-input-wrapper">
             <input type="text" 
                    placeholder="Search by title or author"
                    value={query}
