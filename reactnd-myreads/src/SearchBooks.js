@@ -11,9 +11,13 @@ import PropTypes from 'prop-types'
 class SearchBooks extends Component {
   static propTypes = {
     /**
+     * The original books
+     */
+    books: PropTypes.array.isRequired,
+    /**
      * Keep track of when a user changes the self for a book.
      */
-    onChangeShelf: PropTypes.func.isRequired,
+    onChangeShelf: PropTypes.func.isRequired
   }
 
   state = {
@@ -25,7 +29,8 @@ class SearchBooks extends Component {
 
   /**
    * Keep track of the query as it is being entered by the user.
-   * Update the list of book retrieved for the query.
+   * Update the list of books retrieved for the query.
+   * Set the correct shelf for each retrieved book that is already on a shelf.
    *
    * @param {string} query The query the user entered
    */
@@ -34,6 +39,19 @@ class SearchBooks extends Component {
       this.setState({ query: query })
       BooksAPI.search(query.trim()).then((books) => {
         if (books.length > 0) {
+          /* The ids of books that are already on a shelf */
+          const originalBooksIds = this.props.books.map((book) => book.id)
+          books.map((book) => {
+            /*
+             * If the retrieved book is already on a shelf, assign it to the
+             * correct shelf.
+             */
+            if (originalBooksIds.indexOf(book.id) >= 0) {
+              book.shelf = this.props.books.find(
+                (originalBook => originalBook.id === book.id)).shelf
+            }
+            return book.shelf
+          })
           this.setState({ books: books })
         } else {
           this.setState({ books: [] })
