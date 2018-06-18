@@ -48,7 +48,7 @@ body, .app {
   right: 25px;
   bottom: 25px;
 }
-.open-search a {
+.open-search {
   display: block;
   width: 50px;
   height: 50px;
@@ -174,3 +174,104 @@ body, .app {
   text-align: center;
   font-size: 0.8em;
 }
+
+/* 404 page */
+.container .background {
+  background-size: 100% 100%;
+  height: 100vh;
+  position: relative;
+  width: 100vw;
+}
+
+section {
+  background: rgba(255,127,80,0.3);
+  color: floralwhite;
+  display: block;
+  height: 92%;
+  left: 10%;
+  position: absolute;
+  text-align: center;
+  top: 5%;
+  width: 80%;
+}
+
+h1 {
+  font-size: 1.8em;
+  padding-top: 5%;
+}
+
+p {
+  font-size: 1em;
+  padding: 10px;
+}
+
+button {
+  background: #2e7d32;
+  border: none;
+  border-radius: 5%;
+  color: #fff;
+  cursor: inherit;
+  font-size: 1.4em;
+  height: 70px;
+  text-decoration: none;
+  width: 200px;
+}
+
+button:hover {
+  background: #1B5E20;
+}
+
+/* 404 for small devices in landscape */
+@media screen and (max-height: 460px)
+              and (orientation: landscape) {
+  h1 {
+    font-size: 1.5em;
+    padding-top: 0;
+  }
+
+  p {
+    font-size: 0.9em;
+    padding: 0;
+  }
+}
+
+/* 404 for medium devices */
+@media screen and (min-width: 360px) and (min-height: 620px) {
+  section {
+    height: 80%;
+    top: 10%;
+  }
+
+  h1 {
+    font-size: 1.8em;
+  }
+
+  p {
+    font-size: 1em;
+  }
+
+  button {
+    height: 70px;
+  }
+}
+
+/* 404 for large devices */
+@media screen and (min-width: 675px) and (min-height: 768px) {
+  section {
+    height: 60%;
+    top: 20%;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  p {
+    font-size: 1.3em;
+  }
+
+  button {
+    height: 100px;
+  }
+}
+

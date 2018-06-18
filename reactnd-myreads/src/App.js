@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
-import { Route, Link } from 'react-router-dom'
+import { Route, Link, Switch } from 'react-router-dom'
 import ListBooks from './ListBooks'
 import SearchBooks from './SearchBooks'
+import FourOhFour from './FourOhFour'
 import * as BooksAPI from './BooksAPI'
 import './App.css'
 
@@ -45,30 +46,34 @@ class BooksApp extends Component {
   render() {
     return (
       <div className="app">
-        {/* Render the home page */}
-        <Route exact path="/" render={() => (
-          <div className="list-books">
-            <div className="list-books-title">
-              <h1>MyReads</h1>
-            </div>
+        <Switch>
+          {/* Render the home page */}
+          <Route exact path="/" render={() => (
+            <div className="list-books">
+              <div className="list-books-title">
+                <h1>MyReads</h1>
+              </div>
 
-            <ListBooks
+              <ListBooks
+                books={this.state.books}
+                onChangeShelf={this.changeShelf} />
+
+              <div className="open-search">
+                <Link className="open-search" to="/search">Add a book</Link>
+              </div>
+            </div>
+          )} />
+
+          {/* Render the search page */}
+          <Route path="/search" render={() => (
+            <SearchBooks
               books={this.state.books}
               onChangeShelf={this.changeShelf} />
+          )} />
 
-            <div className="open-search">
-              <Link className="open-search" to="/search">Add a book</Link>
-            </div>
-          </div>
-        )} />
-
-        {/* Render the search page */}
-        <Route path="/search" render={() => (
-          <SearchBooks
-            books={this.state.books}
-            onChangeShelf={this.changeShelf} />
-        )} />
-          
+          {/* Render 404 page */}
+          <Route component={FourOhFour}/>
+        </Switch>
       </div>
     )
   }
