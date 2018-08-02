@@ -87,16 +87,10 @@ class App extends Component {
     /**
      * Check errors related to the Google Maps API key (i.e., API key missing,
      * unauthorized, etc.).
-     * Since at first the map loads regularly and only afterwards it loads
-     * the error, a timeout is used to fix the issue with being unable to
-     * detect the error if run immediately when the component mounts. 
      */
-    setTimeout(() => {
-      const gm_error = document.querySelector('.gm-err-container')
-      if (gm_error) {
-        return this.setState({ mapError: true })
-      }
-    }, 1500)
+    window.gm_authFailure = () => {
+      return this.setState({ mapError: true })
+    }
   }
 
   /**
